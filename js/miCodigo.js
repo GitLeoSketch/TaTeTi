@@ -108,6 +108,7 @@ function aplicarCirculo() {
 }
 function nuevoJuego(){
  ganador= false;
+jugadaNumero =0;
   jugo = 0;
   document.querySelector("#cruz").disabled = false;
   document.querySelector("#circulo").disabled = false;
