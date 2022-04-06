@@ -75,7 +75,7 @@ function habilitarOverlay(){
 function habilitarEleccion(){
   habilitarOverlay();
   mensaje.innerHTML =
-  "<h2>Elija que jugara</h2>";
+  "<h2>Elija que jugará</h2>";
   // document.querySelector("#pasar").setAttribute("style", "display: none");
   document.querySelector("#nuevoJuego").setAttribute("style", "display: none");
 
@@ -153,10 +153,10 @@ function seleccionoCuadro(event = () => {}) {
       valorActual = document.querySelector(liId).innerHTML.trim();
     
       if (valorActual === "O" || valorActual === "X") {
-        // alert("Ya jugo este cuadro");
+        // alert("Ya jugó este cuadro");
         habilitarOverlay();
         mensaje.innerHTML =
-        "<h2>Ya jugo este cuadro</h2>";
+        "<h2>Ya jugó este cuadro</h2>";
         setTimeout(() => {
           quitarOverlay()
         }, 1000);
