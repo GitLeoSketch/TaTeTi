@@ -208,7 +208,7 @@ function controloGanador() {
   ) {
     document.querySelector("#overlay").setAttribute("style", "");
     document.querySelector("#overlay").innerHTML =
-      "<h2>Gano Jugador " + jugadorActual.jugador + ".</h2>";
+      "<h2>Ganó Jugador " + jugadorActual.jugador + ".</h2>";
       document.querySelector("#pasar").disabled = true;
   }else{
     pasar();
