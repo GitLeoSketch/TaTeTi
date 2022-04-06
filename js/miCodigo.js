@@ -5,8 +5,8 @@ let jugador = [
 ];
 let jugadorActual = jugador[0];
 
-Let jugadaNumero = 0;
-Let ganador = false;
+let jugadaNumero = 0;
+let ganador = false;
 
 let mensaje = document.querySelector("#overlay");
 
@@ -177,11 +177,6 @@ function seleccionoCuadro(event = () => {}) {
             
           }, 500);
           
-      if(ganador== false && jugadaNumero == 9){
-          document.querySelector("#overlay").setAttribute("style", "");
-              document.querySelector("#overlay").innerHTML =
-                "<h2>Empate</h2>";
-          }
           
           jugo =1;
         }
@@ -224,6 +219,11 @@ function controloGanador() {
       document.querySelector("#pasar").disabled = true;
       ganador = true;
   }else{
+     if(ganador== false && jugadaNumero == 9){
+          document.querySelector("#overlay").setAttribute("style", "");
+              document.querySelector("#overlay").innerHTML =
+                "<h2>Empate</h2>";
+          }
     pasar();
   }
 }
