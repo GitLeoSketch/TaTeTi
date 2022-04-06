@@ -4,8 +4,9 @@ let jugador = [
   {jugador:2,jugara:""}
 ];
 let jugadorActual = jugador[0];
+
 Let jugadaNumero = 0;
-Let ganadaro = false;
+Let ganador = false;
 
 let mensaje = document.querySelector("#overlay");
 
@@ -107,8 +108,8 @@ function aplicarCirculo() {
   
 }
 function nuevoJuego(){
- ganador= false;
-jugadaNumero =0;
+  ganador= false;
+  jugadaNumero = 0;
   jugo = 0;
   document.querySelector("#cruz").disabled = false;
   document.querySelector("#circulo").disabled = false;
@@ -167,19 +168,21 @@ function seleccionoCuadro(event = () => {}) {
        
       } else {
         document.querySelector(liId).innerHTML = jugadorActual.jugara;
-        jugadaNumero ++
-        if (jugadorActual.jugara !== "") {
+        jugadaNumero ++ ;
+        if(jugadorActual.jugara !== "") {
           setTimeout(() => {
             
             controloGanador();
             
             
           }, 500);
-  if(ganador== false && jugadaNumero==9){
-document.querySelector("#overlay").setAttribute("style", "");
-    document.querySelector("#overlay").innerHTML =
-      "<h2>Empate</h2>";
-}
+          
+      if(ganador== false && jugadaNumero == 9){
+          document.querySelector("#overlay").setAttribute("style", "");
+              document.querySelector("#overlay").innerHTML =
+                "<h2>Empate</h2>";
+          }
+          
           jugo =1;
         }
       }
@@ -219,7 +222,7 @@ function controloGanador() {
     document.querySelector("#overlay").innerHTML =
       "<h2>Ganó Jugador " + jugadorActual.jugador + ".</h2>";
       document.querySelector("#pasar").disabled = true;
-ganador = true;
+      ganador = true;
   }else{
     pasar();
   }
